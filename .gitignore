@@ -1,0 +1,17 @@
+# Ignore Visual Studio temporary files, build result 
+.vs/
+.vscode/
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build output folders
+bin/
+obj/
+
+# Ignore files related to Code Coverage
+coverage-report
+*.coveragexml
+*.testsettings
+*.vsmdi
+TestResults/
