@@ -59,15 +59,12 @@ Coverlet is used to measure the code coverage of the project. Code coverage repo
 
 To run tests with coverage:
 
-\```bash
-dotnet test /p:CollectCoverage=true
-\```
+`dotnet test /p:CollectCoverage=true`
 
 To generate coverage reports in multiple formats (e.g., Cobertura and OpenCover):
 
-\```bash
-dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura,opencover
-\```
+`dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura,opencover`
+
 
 ### **Setting Up Code Coverage**
 
@@ -75,14 +72,14 @@ To view the coverage report:
 
 Install ReportGenerator:
 
-\```bash
-dotnet tool install --global dotnet-reportgenerator-globaltool
-\```
+`dotnet tool install --global dotnet-reportgenerator-globaltool`
+
 
 Generate and view an HTML report:
 
-\```bash
-reportgenerator -reports:./TestResults/coverage.opencover.xml -targetdir:./TestResults/CoverageReport -reporttypes:Html
-\```
+`dotnet "C:\Users\YOUR_USER\.nuget\packages\reportgenerator\5.3.8\tools\net6.0\ReportGenerator.dll" -reports:TestResults/*/coverage.cobertura.xml -targetdir:coverage-report`
+Or
+`reportgenerator -reports:./TestResults/coverage.opencover.xml -targetdir:./TestResults/CoverageReport -reporttypes:Html`
+
 
 Open the index.html file in your browser to view the report.
